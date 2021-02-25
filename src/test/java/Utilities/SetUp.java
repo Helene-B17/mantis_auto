@@ -15,7 +15,7 @@ public class SetUp {
 	private static DesiredCapabilities capability = DesiredCapabilities.chrome();
 	private static WebDriver driver;
 	public static WebDriver SetDriverUp(String browser) {
-		//FOR LOCAL RUN
+		//FOR LOCAL RUN - quote if you are on docker
 		 if(driver != null && driver.toString().contains(browser.toLowerCase())) {
 			
 			System.out.println("*****************************************************************************************************************************" +
@@ -24,20 +24,20 @@ public class SetUp {
 		}
 		
 		if (browser == "Chrome") {
-			// for linux quote if you are on windows
+			// for linux quote if you are on windows or docker
 		  System.setProperty("webdriver.chrome.driver", "src/test/java/Utilities/chromedriver"); 
-		  	// for windows quote if you are on linux
+		  	// for windows quote if you are on linux or docker
 		  // System.setProperty("webdriver.chrome.driver", "src/test/java/Utilities/chromedriver.exe"); 
-		  ChromeOptions options = new ChromeOptions();
-		  options.addArguments("--headless");
-		  driver = new ChromeDriver(options);
+		  //ChromeOptions options = new ChromeOptions();
+		  //options.addArguments("--headless");
+		  driver = new ChromeDriver();
 		}
 		
 		  driver.manage().timeouts().implicitlyWait(1,TimeUnit.SECONDS); 
 		  driver.get(GlobalVariable.URL);
 		  driver.manage().window().maximize();
 		  return driver;
-		
+		/**************************** END OF LOCAL ************************************/
 		// FOR GRID RUN
 		/*
 		capability.setBrowserName(browser);
