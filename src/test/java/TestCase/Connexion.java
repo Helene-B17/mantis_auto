@@ -111,7 +111,7 @@ public class Connexion {
 	public void si_vaut_un_message_d_erreur_s_affiche(String login, String empty, String error) {
 		if (login == "") {
 			try {
-				String text = driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div/div/div/div[4]/p")) // ICI
+				String text = driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div/div/div/div[4]/p/text()"))
 						.getText();
 				assertEquals(text, error);
 			} catch (NoSuchElementException e) {
@@ -124,7 +124,7 @@ public class Connexion {
 	@Then("un message d erreur s affiche {string}")
 	public void un_message_d_erreur_s_affiche(String error) {
 		try {
-			String text = driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div/div/div/div[4]/p"))
+			String text = driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div/div/div/div[4]/p/text()"))
 					.getText();
 			assertEquals(text, error);
 		} catch (NoSuchElementException e) {

@@ -33,7 +33,7 @@ public class SetUp {
 		  driver = new ChromeDriver();
 		}
 		
-		  driver.manage().timeouts().implicitlyWait(1,TimeUnit.SECONDS); 
+		  driver.manage().timeouts().implicitlyWait(4,TimeUnit.SECONDS); 
 		  driver.get(GlobalVariable.URL);
 		  driver.manage().window().maximize();
 		  return driver;
