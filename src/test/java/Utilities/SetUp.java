@@ -26,7 +26,7 @@ public class SetUp {
 		if (browser == "Chrome") {
 			// for linux quote if you are on windows or docker
 		  System.setProperty("webdriver.chrome.driver", "src/test/java/Utilities/chromedriver"); 
-		  	// for windows quote if you are on linux or docker
+		  // for windows quote if you are on linux or docker
 		  // System.setProperty("webdriver.chrome.driver", "src/test/java/Utilities/chromedriver.exe"); 
 		  //ChromeOptions options = new ChromeOptions();
 		  //options.addArguments("--headless");
@@ -39,6 +39,7 @@ public class SetUp {
 		  return driver;
 		/**************************** END OF LOCAL ************************************/
 		// FOR GRID RUN
+		// QUOTE IF YOU ARE ON LOCAL
 		/*
 		capability.setBrowserName(browser);
 		capability.setPlatform(Platform.LINUX);
@@ -52,6 +53,7 @@ public class SetUp {
 		}
 		return driver;
 		*/
+
 	}
 	
 }

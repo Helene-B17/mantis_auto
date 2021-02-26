@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		plugin= {"pretty", "json:target/json/output.json", "html:FeaturesReport", "html:target/html/report" },
 		features="Features", 
 		glue="TestCase",
-		tags= {"@connexion"}
+		tags= {"@Connexion, @ConnexionV2"}
 	
 )
 public class CucumberSuiteRunner {
